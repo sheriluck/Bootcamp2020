@@ -28,13 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: installing node module
         uses: actions/checkout@v3
-         with:
-           node-version: 16 
+        with: 
+          node-version: 16
 
       # Runs a set of commands using the runners shell
       - name: installing surge
         run: npm install --global surge
-        - name: deploying surge
-         run: surge ./ canadamission.surge.sh token ${{ secrets.canada-mission }}
+     - name: deploying surge
+       run: surge ./ canadamission.surge.sh token ${{ secrets.canada-mission }}
           echo Add other actions to build,
           echo test, and deploy your project.
